@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Artificers</title>
+    <link
+      rel="icon"
+      type="image/ico"
+      href="../demo/images/artificer-logo.ico"
+    />
+    <meta
+      name="description"
+      content="particles.js is a lightweight JavaScript library for creating particles."
+    />
+    <meta name="author" content="Vincent Garreau" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- particles.js container -->
+
+      <div class="menu-container">
+        <div class="character-container">
+          <img src="../demo/images/artificer.gif" />
+        </div>
+        <div class="menu-content">
+          <div class="menu-box">
+            <div class="menu">
+              <ul>
+                <li class="active">
+                  <a href="#"><span>Home</span></a>
+                </li class="">
+                <li>
+                  <a href="../demo/team.html"><span>Team</span></a>
+                </li>
+                <li>
+                  <a href="../demo/projects.html"><span>Projects</span></a>
+                </li>
+                <li>
+                  <a href="../demo/contact us.html"><span>Contact Us</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="about-us">
+              <span class="artificer-name">The Artificers</span>
+              <p>
+                <span class="strong-text">The Aritificers</span> is an
+                experienced and passionate group of designers, developers,
+                project managers, and artists. Every client we work with becomes
+                a part of the team. Together we face the challenges and
+                celebrate the victories. The Artificer team is active in the
+                creative community, endlessly interested in what’s next, and
+                generally pleasant to be around.
+              </p>
+              <p>
+                We design responsive websites, WordPress Websites, Mobile
+                Responsive Web Designs, eCommerce websites and just about
+                anything with the word website.
+              </p>
+              <p>
+                We strive to provide the best quality service and listen to our
+                customers needs first and foremost. We believe in helping and
+                building our community through our work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="particles-js"></div>
+      <div class="trapezoid-holder"><div id="trapezoid"></div></div>
+      <div class="footer">
+        <img class="footer-logo" src="../demo/images/footer-logo.svg" />
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="../particles.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      var count_particles, stats, update;
+      stats = new Stats();
+      stats.setMode(0);
+      stats.domElement.style.position = "absolute";
+      stats.domElement.style.left = "0px";
+      stats.domElement.style.top = "0px";
+      document.body.appendChild(stats.domElement);
+      count_particles = document.querySelector(".js-count-particles");
+      update = function() {
+        stats.begin();
+        stats.end();
+        if (
+          window.pJSDom[0].pJS.particles &&
+          window.pJSDom[0].pJS.particles.array
+        ) {
+          count_particles.innerText =
+            window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    </script>
+  </body>
+</html>

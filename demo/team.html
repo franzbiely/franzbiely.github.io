@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Artificers</title>
+    <link
+      rel="icon"
+      type="image/ico"
+      href="../demo/images/artificer-logo.ico"
+    />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/functions.js"></script>
+  </head>
+
+  <body>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <div class="top-logo-container">
+   
+      <a href="home.html"><img src="../demo/images/footer-logo.svg"/></a>
+    </div>
+    <div id="content">
+    <div class="team-container">
+      <div class="member-info-box">
+        <div class="member-name" id="name">Francis</div>
+        <div class="member-position" id="position">
+          <span>Project Manager</span>
+        </div>
+        <div class="member-about">
+          <article id="description">
+              Artificer's team leader. Senior Front-End and Back-End Developer.
+          </article>
+
+          <div class="skill-heading">Strengths</div>
+          <div
+            id="skill-container"
+            class="skills-set-container sir"
+            style="color:white;"
+          >
+            <div class="skills-wrapper">
+              <div class="skill html">
+                <span class="skill-title">HTML / CSS</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill php">
+                <span class="skill-title">PHP</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill laravel">
+                <span class="skill-title">Laravel</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill mysql">
+                <span class="skill-title">MySQL</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill jsjq">
+                <span class="skill-title">JavaScript & JQuery</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill reactjs">
+                <span class="skill-title">ReactJS</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill angular">
+                <span class="skill-title">Angular</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill wordpress">
+                <span class="skill-title">WordPress</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill xd">
+                <span class="skill-title">Adobe XD</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill illustrator">
+                <span class="skill-title">Adobe Illustrator</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill photoshop">
+                <span class="skill-title">Adobe Photoshop</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+              <div class="skill ae">
+                <span class="skill-title">Adobe After Effects</span>
+                <div class="skill-experience-bar"><div class="bar"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="three-container">
+        <h2>Hidden backfaces</h2>
+<div class="carousel" data-gap="20" data-bfc>
+	<figure>
+    <img src="images/Members/jurris 2.png" alt="">
+    <img src="images/Members/justin.png" alt="">
+    <img src="images/Members/robert.png" alt="">
+    <img src="images/Members/jurris 2.png" alt="">
+	</figure>
+  <nav>
+      <button class="nav next" onclick="nextMember();">
+          Next Member
+      </button>
+    </nav>
+</div>
+      </div>
+    </div>
+  </div>  
+      <div id="loading-container">
+          <div id="mask"> </div>
+          <div class="logo-container">
+              <span class="icon- artificer-logo">&#xe900;</span>
+          </div>
+          <div class="lds-ripple">
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+      </div>
+    <!-- scripts -->
+    <script src="js/carousel.js"></script>
+    <script src="../particles.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- <script src="js/three.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/bas.js"></script>
+    <script src="js/OrbitControls-2.js"></script>
+    <script src="js/team.js"></script> -->
+
+    <script>
+      var count_particles, stats, update;
+      stats = new Stats();
+      stats.setMode(0);
+      stats.domElement.style.position = "absolute";
+      stats.domElement.style.left = "0px";
+      stats.domElement.style.top = "0px";
+      document.body.appendChild(stats.domElement);
+      count_particles = document.querySelector(".js-count-particles");
+      update = function() {
+        stats.begin();
+        stats.end();
+        if (
+          window.pJSDom[0].pJS.particles &&
+          window.pJSDom[0].pJS.particles.array
+        ) {
+          count_particles.innerText =
+            window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    </script>
+  </body>
+</html>

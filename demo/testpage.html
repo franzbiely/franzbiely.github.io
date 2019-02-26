@@ -1,0 +1,79 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Artificers</title>
+    <link
+      rel="icon"
+      type="image/ico"
+      href="../demo/images/artificer-logo.ico"
+    />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <div class="top-logo-container"></div>
+        <h2>Hidden backfaces</h2>
+<div style="
+position:absolute;
+right: 0;
+top:0;
+left:0;
+bottom:0;
+background: red;">
+<div class="carousel" data-gap="20" data-bfc>
+	<figure>
+    <img src="https://source.unsplash.com/bjhrzvzZeq4/800x533" alt="">
+		<img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+		<img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+		<img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+		<img src="https://source.unsplash.com/mCg0ZgD7BgU/800x533" alt="">
+		<img src="https://source.unsplash.com/VkwRmha1_tI/800x533" alt="">
+		<img src="https://source.unsplash.com/1FWICvPQdkY/800x533" alt="">
+		<img src="https://source.unsplash.com/7mUXaBBrhoA/800x533" alt="">
+	</figure>
+	<nav>
+		<button class="nav prev">Prev</button>
+		<button class="nav next">Next</button>
+	</nav>
+</div>
+</div>   
+  <!-- scripts -->
+    <script src="js/carousel.js"></script>
+    <script src="../particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/functions.js"></script>
+    <!-- <script src="js/three.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/bas.js"></script>
+    <script src="js/OrbitControls-2.js"></script>
+    <script src="js/team.js"></script> -->
+
+    <script>
+      var count_particles, stats, update;
+      stats = new Stats();
+      stats.setMode(0);
+      stats.domElement.style.position = "absolute";
+      stats.domElement.style.left = "0px";
+      stats.domElement.style.top = "0px";
+      document.body.appendChild(stats.domElement);
+      count_particles = document.querySelector(".js-count-particles");
+      update = function() {
+        stats.begin();
+        stats.end();
+        if (
+          window.pJSDom[0].pJS.particles &&
+          window.pJSDom[0].pJS.particles.array
+        ) {
+          count_particles.innerText =
+            window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    </script>
+  </body>
+</html>
