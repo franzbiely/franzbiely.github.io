@@ -1,0 +1,80 @@
+.home-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .menu-container{
+        display: flex;
+        background: rgba(0,0,0,.5);
+        .left-section{
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            width:55%;
+            ul{
+                list-style-type: none;
+                .active{
+                    color: red;
+                }
+            }
+            ul li{
+                color: white;
+                font-family: "leculier";
+                cursor: pointer;
+                font-size: 50px;
+            }
+            ul li:hover{
+                color: red;
+            }
+        }
+        .right-section{
+            position: relative;
+            padding: 30px 30px 30px 0;
+            width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .about-us{
+                h1{
+                    font-family: "Voice Activated BB";
+                    font-size: 30px;
+                    color: red;
+                    text-transform: uppercase;
+                    padding: 0;
+                    margin: 0;
+                }
+                p:first-child{
+                    margin-top: -10px;
+                }
+                p{  
+                    font-family: "Abel";
+                    color: white;
+                    text-align: justify;
+                    width: 70%;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    text-rendering: optimizeLegibility;
+                }
+            }
+            .character{
+                position: absolute;
+                right: -220px;
+            }
+        }
+    }
+}
+.footer{
+    position: absolute;
+    top: 10px;
+    left: 10px ;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    .footer-logo{
+        width: 200px;
+    }
+}
