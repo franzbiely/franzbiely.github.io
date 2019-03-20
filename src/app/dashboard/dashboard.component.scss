@@ -22,9 +22,10 @@
                     image-rendering: pixelated;
                 }
                 .btn-start{
-                    font-family: "leculier";
+                    font-family: "Voice Activated BB";
                     color: red;
-                    border: .5px red solid;
+                    text-transform: uppercase;
+                    border: 1px #333 solid;
                     margin-top: 30px;
                     width: 170px;
                     padding: 15px 0;
@@ -36,8 +37,8 @@
                     outline: none;
                 }
                 .btn-start:hover{
-                    box-shadow: 0 0 20px rgba(255,0,0,.85);
-                    transition: .5s;
+                    border-color: red;
+                    transition: .3s;
                 }
 
             }  

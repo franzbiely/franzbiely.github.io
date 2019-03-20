@@ -5,45 +5,157 @@
     bottom: 0;
     right: 0;
     left: 0;
+    padding: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     .contact-box{
         position: relative;
-        width: 80%;
-        height: 80%;
-        border:1px red solid;
+        width: 100%;
+        height: 100%;
         background: rgba(5,5,5, .85);
         .contact-content{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
             .box-head{
-                padding: 10px 20px;
-                border-bottom: 1px red solid;
+                height: 60px;
+                display: flex;
+                justify-content: center;
                 h1{
                     font-family: "Leculier";
                     color: red;
-                    font-size: 40px;
+                    font-size: 50px;
+                    margin: 15px 0;
+                    position: absolute;
+                    margin-top: 0;
+                    animation: floatText 2s ease-in-out alternate infinite;
                 }
             }
             .box-body{
                 position: relative;
                 display: flex;
                 flex: 1;
-                height: 100%;
                 .left-section{
                     flex: 1;
-                    background: white;
-                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 20px 0 40px;
+                    .username, .email{
+                        position: relative;
+                        
+                    }
+                    .email{
+                        margin-top: 15px;
+                    }
+                    .username span, .email span{
+                        top: 10px;
+                        left: 10px;
+                        position: absolute;
+                        color: red;
+                        background: red;
+                        margin: 0;
+                        padding: 0;
+                        background: black;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        font-family: "Voice Activated BB";
+                    }
+                    .username input[type=text], .email input[type=text]{
+                        background: rgba(0,0,0, .85);
+                        padding: 15px 10px 10px 10px;
+                        border:1px #333 solid;
+                        border-radius: 3px;
+                        width: 100%;
+                        outline: none;
+                        color: white;
+                        font-family: "Abel";
+                        font-size: 14px;
+                    }
+                    .information{
+                        margin-top: 20px;
+                        .logo-description{
+                            width:300px;
+                        }
+                        .company-details{
+                            margin-top: 15px;
+                            color: white;
+                            font-family: "Abel";
+                        }
+                        .company-details div:not(:first-child){
+                            margin-top: 5px;
+                        }
+                    }
                 }
                 .right-section{
-                    background: yellow;
                     flex: 2;
                     height: 100%;
+                    padding: 0 20px;
+                    display: flex;
+                    flex-direction: column;
+                    .message-box{
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        span{
+                            top: 10px;
+                            left: 10px;
+                            position: absolute;
+                            color: red;
+                            background: red;
+                            margin: 0;
+                            padding: 0;
+                            background: black;
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            font-family: "Voice Activated BB";
+                        }
+                        textarea{
+                            background: rgba(0,0,0, .85);
+                            padding: 15px 10px 10px 10px;
+                            border:1px #333 solid;
+                            border-radius: 3px;
+                            outline: none;
+                            color: white;
+                            font-family: "Abel";
+                            font-size: 14px;
+                            resize: none;
+                        }
+                    }
+                    .button-container{
+                        padding:20px 0;
+                        button{
+                            float: right;
+                            border: 1px #333 solid;
+                            border-radius: 20px;
+                            padding: 10px 30px;
+                            background: rgba(0,0,0,.85);
+                            color: #989898;
+                            font-family: "Voice Activated BB";
+                            text-transform: uppercase;
+                            cursor: pointer;
+                            transition:.3s;
+                            box-shadow: 0 0 20px transparent;
+                        }
+                        button:hover{
+                            color: red;
+                            border-color: red;
+                            transition: .3s;
+                        }
+                    }
                 }
             }
         }
     }
 }
-
+@keyframes floatText{
+    from{
+        transform: translatey(0px);
+    }
+    to{
+        transform: translatey(-15px);
+    }
+}
 .footer{
     position: absolute;
     top: 10px;
@@ -53,5 +165,6 @@
     align-items: center;
     .footer-logo{
         width: 200px;
+        cursor: pointer;
     }
 }
