@@ -10,8 +10,12 @@ export class ProjectsComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    
   }
   toHome() {
     this.router.navigateByUrl('/home');
+  }
+  toProject() {
+    this.router.navigateByUrl('/project');
   }
 }
