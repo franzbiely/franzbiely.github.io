@@ -12,10 +12,4 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     
   }
-  toHome() {
-    this.router.navigateByUrl('/home');
-  }
-  toProject() {
-    this.router.navigateByUrl('/project');
-  }
 }

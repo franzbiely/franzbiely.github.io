@@ -1,15 +1,62 @@
 import { Component } from '@angular/core';
-import * as $ from 'jquery';
+import { RouterOutlet } from '@angular/router';
+import {
+  trigger,
+  query,
+  style,
+  animate,
+  transition,
+  animateChild,
+  group
+} from '@angular/animations';
 
+const slideInAnimation =
+  trigger('routeAnimations', [
+    transition('* <=> *', [
+      style({ position: 'absolute', top: 0, right: 0, left: 0, bottom: 0  }),
+      query(':enter, :leave', [
+        style({
+          position: 'absolute',
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0
+        })
+      ]),
+      query(':enter', [
+        style({ opacity: 0 })
+      ]),
+      query(':leave', animateChild()),
+      group([
+        query(':leave', [
+          animate('.5s ease-in-out', style({ opacity: 0 }))
+        ]),
+        query(':enter', [
+          animate('.5s ease-in-out', style({ opacity: 1}))
+        ])
+      ]),
+      query(':enter', animateChild()),
+    ])
+]);
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    slideInAnimation
+    // animation triggers go here
+  ]
 })
+
 export class AppComponent {
   title = 'artificer-system';
   myParams: object = {};
+  
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
   ngOnInit() {
+    
     this.myParams = {
       particles: {
         "number": {
@@ -128,5 +175,6 @@ export class AppComponent {
         }
       };
   }
+  
 }
 

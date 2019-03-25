@@ -1,6 +1,5 @@
 .project-view-container {
   position: relative;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +8,6 @@
     display: flex;
     flex: 1;
     background: rgba(0, 0, 0, 0.5);
-    height: 100%;
     .project-view-content {
       height: 100%;
       display: flex;
@@ -24,6 +22,7 @@
           background: rgba(0, 0, 0, 0.5);
           display: flex;
           flex-direction: column;
+          position: relative;
           align-items: center;
           h1 {
             font-family: "Leculier";
@@ -32,7 +31,8 @@
             background: -webkit-linear-gradient(#c50000, rgb(255, 0, 0));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin: 3px 0;
+            margin:0;
+            animation: floatText 2s ease-in-out infinite alternate;
           }
           .project-description {
             color: white;
@@ -48,6 +48,18 @@
           align-items: center;
           width: 100%;
           margin: 20px 0 15px 0px;
+          div:first-child{
+            animation: floatText 2.5s ease-in-out alternate infinite;
+            animation-delay: -1s;
+          }
+          div:nth-child(2){
+            animation: floatText 2.5s ease-in-out alternate infinite;
+            animation-delay: -1.5s;
+          }
+          div:nth-child(3){
+            animation: floatText 2.5s ease-in-out alternate infinite;
+            animation-delay: -2s;
+          }
           div {
             border: red 1px solid;
             height: 50px;
@@ -67,6 +79,7 @@
           }
         }
         .project-previews {
+          margin-top: 10px;
           display: grid;
           grid-template-columns: auto auto auto;
           align-items: center;
@@ -88,7 +101,7 @@
         padding: 20px;
         justify-content: center;
         img {
-          max-width: 80%;
+          max-width: 75%;
         }
       }
     }
@@ -104,5 +117,13 @@
   .footer-logo {
     width: 200px;
     cursor: pointer;
+  }
+}
+@keyframes floatText{
+  from{
+      transform: translatey(-10px);
+  }
+  to{
+      transform: translatey(10px);
   }
 }

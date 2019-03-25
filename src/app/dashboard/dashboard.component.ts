@@ -11,8 +11,4 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
   }
-  toHome() {
-    this.router.navigateByUrl('/home');
-  }
-
 }

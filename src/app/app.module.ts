@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParticlesModule } from 'angular-particle';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +25,19 @@ import { ProjectViewComponent } from './project-view/project-view.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ParticlesModule
+    ParticlesModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot([
+      { path: '', pathMatch: 'full', redirectTo: '/index' },
+      { path: 'index', component: DashboardComponent, data: {animation: 'Index'} },
+      { path: 'home', component: HomeComponent, data: {animation: 'HomePage'} },
+      { path: 'contact', component: ContactComponent, data: {animation: 'ContactPage'} },
+      { path: 'projects', component: ProjectsComponent, data: {animation: 'ProjectsPage'} },
+      { path: 'team', component: TeamComponent, data: {animation: 'TeamPage'} },
+      { path: 'project', component: ProjectViewComponent, data: {animation: 'ProjectPage'} },
+    ])
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

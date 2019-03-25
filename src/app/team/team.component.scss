@@ -1,12 +1,241 @@
-.footer{
+.team-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  .team-box {
+    padding: 80px 20px 20px 20px;
     position: absolute;
-    top: 10px;
-    left: 10px ;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    .footer-logo{
-        width: 200px;
-        cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    .team-content {
+      display: flex;
+      height: 100%;
+      .left-section {
+        flex: 1;
+      }
+      .right-section {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .name-container {
+          text-align: center;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+          h1 {
+            position: absolute;
+            top: -100px;
+            font-family: "TranscendsGames";
+            font-size: 80px;
+            background: -webkit-linear-gradient(#dadada, #b4b4b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            margin: 0;
+            animation: floatText 2s ease-in-out infinite alternate;
+          }
+          h2 {
+            font-family: "Leculier";
+            font-size: 20px;
+            margin: 3px;
+            background: -webkit-linear-gradient(#c50000, rgb(255, 0, 0));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .name-description {
+            text-align: center;
+            font-size: 14px;
+            color: white;
+            font-family: "Abel";
+          }
+        }
+        .skills-set-container {
+          height: 160px;
+          width: 100%;
+          margin-top: 50px;
+          .skills-wrapper {
+            max-height: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            .skill {
+              margin: 5px;
+              .skill-title {
+                font-family: "Abel";
+                color: white;
+                font-size:13px;
+                letter-spacing: 1px;
+                margin-left: 5px;
+              }
+              .skill-experience-bar {
+                height: 5px;
+                width: 200px;
+                border: 1px rgb(99, 0, 0) solid;
+                border-radius: 6px;
+                margin-top: 5px;
+                position: relative;
+                display: flex;
+                padding: 3px;
+                overflow: hidden;
+              }
+              .bar {
+                height: 100%;
+                background-color: red;
+                border-radius: 3px;
+              }
+            }
+          }
+        }
+      }
     }
+  }
+}
+.member-picture {
+  position: absolute;
+  height: 100%;
+  bottom: 3px;
+  left: 50px;
+  display: flex;
+  align-items: flex-end;
+  img {
+    height: 95%;
+  }
+}
+.footer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  .footer-logo {
+    width: 200px;
+    cursor: pointer;
+  }
+}
+@keyframes floatText{
+  from{
+      transform: translatey(0px);
+  }
+  to{
+      transform: translatey(15px);
+  }
+}
+/*            Sir Francis STATS               */
+.sir {
+  .html .bar,
+  .php .bar,
+  .jsjq .bar,
+  .reactjs .bar,
+  .angular .bar,
+  .mysql .bar,
+  .laravel .bar {
+    width: 100%;
+  }
+  .wordpress {
+    display: none;
+  }
+}
+/*            Justin STATS               */
+.justin {
+  .html .bar {
+    width: 80%;
+  }
+  .php .bar {
+    width: 90%;
+  }
+  .jsjq .bar {
+    width: 95%;
+  }
+  .reactjs .bar {
+    width: 85%;
+  }
+  .angular .bar {
+    width: 80%;
+  }
+  .mysql .bar {
+    width: 75%;
+  }
+  .laravel .bar {
+    width: 80%;
+  }
+  .wordpress {
+    display: none;
+  }
+}
+/*            Robert STATS               */
+.robert {
+  .html .bar,
+  .php .bar {
+    width: 80%;
+  }
+  .jsjq .bar {
+    width: 85%;
+  }
+  .reactjs .bar,
+  .mysql .bar {
+    width: 80%;
+  }
+  .wordpress .bar {
+    width: 70%;
+  }
+  .angular .bar {
+    width: 50%;
+  }
+  .laravel {
+    display: none;
+  }
+}
+/*            Jurris STATS               */
+.jurris {
+  .html .bar {
+    width: 85%;
+  }
+  .jsjq .bar {
+    width: 50%;
+  }
+  .ae .bar,
+  .xd .bar {
+    width: 65%;
+  }
+  .illustrator .bar {
+    width: 80%;
+  }
+  .photoshop .bar {
+    width: 85%;
+  }
+  .wordpress .bar {
+    width: 80%;
+  }
+}
+.jurris .php,
+.jurris .reactjs,
+.jurris .angular,
+.jurris .mysql,
+.jurris .laravel {
+  display: none;
+}
+.sir .ae,
+.sir .illustrator,
+.sir .photoshop,
+.sir .xd,
+.justin .ae,
+.justin .illustrator,
+.justin .photoshop,
+.justin .xd,
+.robert .ae,
+.robert .illustrator,
+.robert .photoshop,
+.robert .xd {
+  display: none;
 }
