@@ -31,8 +31,7 @@
               "src/assets/css/style.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "src/assets/js/vanilla-tilt.js",
+              "../node_modules/jquery/dist/jquery.js",
               "src/assets/js/functions.js"
             ],
             "es5BrowserSupport": true

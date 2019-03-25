@@ -12,6 +12,7 @@
       height: 100%;
       display: flex;
       flex: 1;
+      perspective: 50px;
       .left-section {
         padding: 20px 0 0 0;
         flex: 2;
@@ -84,6 +85,10 @@
           grid-template-columns: auto auto auto;
           align-items: center;
           justify-content: flex-end;
+          transition: transform 0.5s;
+          -webkit-transition: transform 0.5s;
+          -moz-transition: transform 0.5s;
+          -o-transition: transform 0.5s;
           div {
             padding: 0 20px;
           }

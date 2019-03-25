@@ -8,11 +8,12 @@
   justify-content: center;
   padding: 80px;
   overflow-y: auto;
+  overflow-x: hidden;
   .project-box {
     position: relative;
     width: 100%;
     #container-project{
-      perspective: 30px;
+      perspective: 50px;
     }
     .project-content {
       .box-head {
@@ -42,6 +43,10 @@
         grid-template-columns: auto auto auto;
         align-items: center;
         justify-content: center;
+        transition: transform 0.5s;
+        -webkit-transition: transform 0.5s;
+        -moz-transition: transform 0.5s;
+        -o-transition: transform 0.5s;
         .project-item{
           padding: 40px;
           position: relative;

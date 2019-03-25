@@ -21,21 +21,21 @@ const slideInAnimation =
           bottom: 0,
           left: 0,
           right: 0
-        })
-      ]),
+        }),
+      ], {optional: true}),
       query(':enter', [
         style({ opacity: 0 })
-      ]),
-      query(':leave', animateChild()),
+      ] ,{optional: true}),
+      query(':leave', animateChild(),{optional: true}),
       group([
         query(':leave', [
-          animate('.5s ease-in-out', style({ opacity: 0 }))
-        ]),
+          animate('.3s ease-in-out', style({ opacity: 0 }))
+        ],{optional: true}),
         query(':enter', [
-          animate('.5s ease-in-out', style({ opacity: 1}))
-        ])
+          animate('.3s ease-in-out', style({ opacity: 1}))
+        ],{optional: true})
       ]),
-      query(':enter', animateChild()),
+      query(':enter', animateChild(),{optional: true}),
     ])
 ]);
 @Component({

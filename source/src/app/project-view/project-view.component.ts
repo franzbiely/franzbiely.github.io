@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
+import { Component, OnInit, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-project-view',
   templateUrl: './project-view.component.html',
@@ -7,11 +6,14 @@ import { Router } from '@angular/router'
 })
 export class ProjectViewComponent implements OnInit {
 
-  constructor(private router: Router) { }
 
-  ngOnInit() {
+  constructor(private elementRef: ElementRef) { }
+  ngAfterViewInit() {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "../assets/js/tilt.js";
+    this.elementRef.nativeElement.appendChild(s);
   }
-  toHome() {
-    this.router.navigateByUrl('/home');
+  ngOnInit() {
   }
 }
