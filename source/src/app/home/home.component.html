@@ -2,10 +2,50 @@
   <div class="menu-container">
     <div class="left-section">
       <ul>
-        <li class="active" (click)="toHome()">Home</li>
-        <li routerLink="/team">Team</li>
-        <li routerLink="/projects">Projects</li>
-        <li routerLink="/contact">Contact Us</li>
+        <li class="active li-home" (click)="toHome()">
+          <div class="list-container">
+            <span>
+              Home
+            </span>
+            <img
+              class="home-hover"
+              src=""
+            />
+          </div>
+        </li>
+        <li class="li-team" routerLink="/team">
+          <div class="list-container">
+            <span>
+              Team
+            </span>
+            <img
+              class="team-hover"
+              src=""
+            />
+          </div>
+        </li>
+        <li class="li-projects" routerLink="/projects">
+          <div class="list-container">
+            <span>
+              Projects
+            </span>
+            <img
+              class="projects-hover"
+              src=""
+            />
+          </div>
+        </li>
+        <li class="li-contact" routerLink="/contact">
+          <div class="list-container">
+            <span>
+              Contact Us
+            </span>
+            <img
+              class="contact-hover"
+              src=""
+            />
+          </div>
+        </li>
       </ul>
     </div>
     <div class="right-section">

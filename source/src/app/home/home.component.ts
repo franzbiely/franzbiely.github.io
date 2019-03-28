@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,17 +7,16 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
-
+  constructor(private elementRef: ElementRef) { }
+  ngAfterViewInit() {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "../assets/js/functions.js";
+    this.elementRef.nativeElement.appendChild(s);
+  }
   ngOnInit() {
+
+    
   }
-  toTeam() {
-    this.router.navigateByUrl('/team');
-  }
-  toProjects() {
-    this.router.navigateByUrl('/projects');
-  }
-  toContact() {
-    this.router.navigateByUrl('/contact');
-  }
+  
 }

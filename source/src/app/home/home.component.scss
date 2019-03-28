@@ -11,6 +11,7 @@
         border-top: 1px red solid;
         border-bottom: 1px red solid;
         display: flex;
+        width: 100%;
         background: rgba(0,0,0,.5);
         .left-section{
             padding: 30px 0 30px 30px;
@@ -24,11 +25,25 @@
                 }
             }
             ul li{
-                line-height: 60px;
+                line-height:100px;
                 color: white;
                 font-family: "leculier";
                 cursor: pointer;
                 font-size: 50px;
+                .list-container{
+                    position: relative;
+                    span{
+                        position: relative;
+                        background: black;
+                        z-index: 2;
+                    }
+                    img{
+                        position: absolute;
+                        left: -75px;
+                        top: -25px;
+                        z-index: 1;
+                    }
+                }
             }
             ul li:hover{
                 color: red;
