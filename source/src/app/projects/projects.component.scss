@@ -39,6 +39,7 @@
           top: 100px;
       }
       .box-projects {
+        margin-top: 50px;
         display: grid;
         grid-template-columns: auto auto auto;
         align-items: center;
@@ -46,14 +47,27 @@
         transition: transform 0.5s;
         -webkit-transition: transform 0.5s;
         -moz-transition: transform 0.5s;
-        -o-transition: transform 0.5s;
+        -o-transition: transform 0.3s;
+        .project-item:hover{
+          animation: backgroundAnimate .3s ease;
+          animation-fill-mode: forwards;
+          // .img .image-overlay-effect{
+          //   opacity: 1;
+          //   transition:.5s;
+          // }
+        }
         .project-item{
           padding: 40px;
           position: relative;
+          background-image:url("../../assets/images/border-top-left.svg"), url("../../assets/images/border-top-right.svg"), url("../../assets/images/border-bottom-left.svg"), url("../../assets/images/border-bottom-right.svg") ;  
+          background-position: 4% 4%, 94% 4%,  4% 94%, 94% 94%;
+          transition: .3s;
+          background-size: 60px;
+          background-repeat: no-repeat;
           .img-overlay{
-            background: rgba(0,0,0,.5);
+            z-index: 2;
             opacity: 0;
-            transition: .5s;
+            transition: 1s;
             position: absolute;
             top:0;
             bottom:0;
@@ -66,8 +80,8 @@
               a{
                 cursor: pointer;
                 background: black;
-                width: 40px;
-                height:40px;
+                width: 50px;
+                height:50px;
                 border-radius: 100px;
                 display: flex;
                 align-items:center;
@@ -75,7 +89,7 @@
               }
               .icon-view{
                 content:url('../../assets/images/Icons/View.svg');
-                color: red;
+                fill: red;
                 width: 30px;
                 height:30px;
                 
@@ -85,10 +99,22 @@
             width: 200px;
             cursor: pointer;
             border-radius: 6px;
+            position: relative;
+          }
+          .image-overlay-effect{
+            z-index: 1;
+            opacity: 1;
+            transition: .5s;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0; 
+            background-color: rgba(0,0,0,.5); 
           }
         }
         .project-item:hover{
-          .img-overlay{
+         .img-overlay{
             opacity: 1;
             transition: .5s;
           }
@@ -115,5 +141,14 @@
   .footer-logo {
     width: 200px;
     cursor: pointer;
+  }
+}
+
+@keyframes backgroundAnimate{
+  from{
+    background-position: 4% 4%, 94% 4%,  4% 94%, 94% 94%;
+  }
+  to{
+    background-position: 2% 2%, 96% 2%,  2% 96%, 96% 96%;
   }
 }

@@ -26,9 +26,11 @@
           position: relative;
           align-items: center;
           h1 {
-            font-family: "Leculier";
+            text-align: center;
+            font-family: "Maassslicer";
             text-transform: uppercase;
             font-size: 50px;
+            width: 1000px;
             background: -webkit-linear-gradient(#c50000, rgb(255, 0, 0));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -41,6 +43,7 @@
             font-size: 15px;
             text-align: center;
             width: 70%;
+            margin-top: 30px;
           }
         }
         .project-languages {
@@ -62,22 +65,40 @@
             animation-delay: -2s;
           }
           div {
-            border: red 1px solid;
+            border: black 5px solid;
             height: 50px;
             width: 50px;
-            background: rgba(0, 0, 0, 0.5);
+            background: white;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 200px;
             margin: 10px 10px;
-          }
-          div .plang {
-            content: url("../../assets/images/logo.svg");
-            width: 50px;
-            height: 50px;
-            color: white;
-          }
+            .plang {
+              content: url("../../assets/images/logo.svg");
+              width: 50px;
+              height: 50px;
+              color: white;
+            }
+            .react {
+              content: url("../../assets/images/Planguages/react.svg");
+              width:40px;
+              height: 40px;
+              color: white;
+            }
+            .java {
+              content: url("../../assets/images/Planguages/java.svg");
+              width:40px;
+              height: 40px;
+              color: white;
+            }
+            .firebase {
+              content: url("../../assets/images/Planguages/firebase.svg");
+              width:40px;
+              height: 40px;
+              color: white;
+            }
+          } 
         }
         .project-previews {
           margin-top: 10px;
@@ -106,7 +127,8 @@
         padding: 20px;
         justify-content: center;
         img {
-          max-width: 75%;
+          height: 500px;
+          border-radius: 4px;
         }
       }
     }

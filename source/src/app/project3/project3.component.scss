@@ -1,0 +1,182 @@
+.project-view-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 20px 20px;
+    .close{
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      .icon-close:hover{
+        box-shadow: 0 0 10px red;
+        transition: .5s; 
+      }
+      .icon-close{
+        transition: .5s;
+        box-shadow: 0 0 0px red;
+        border: 2px red solid;
+        content: url("../../assets/images/close.svg");
+        padding: 5px;
+        border-radius: 100px;
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+    .project-view-box {
+      display: flex;
+      flex: 1;
+      background: rgba(0, 0, 0, 0.5);
+      .project-view-content {
+        height: 100%;
+        display: flex;
+        flex: 1;
+        perspective: 50px;
+        .left-section {
+          justify-content: center;
+          padding: 20px 0 0 0;
+          flex: 2;
+          flex-direction: column;
+          display: flex;
+          align-items: center;
+          .title {
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            h1 {
+              text-align: center;
+              font-family: "Maassslicer";
+              text-transform: uppercase;
+              font-size: 70px;
+              word-break: break-word;
+              width: 800px;
+              background: -webkit-linear-gradient(#c50000, rgb(255, 0, 0));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              margin:0;
+              animation: floatText 2s ease-in-out infinite alternate;
+            }
+            .project-description {
+              color: white;
+              font-family: "Abel";
+              font-size: 18px;
+              text-align: center;
+              width: 70%;
+              margin-top: 30px;
+            }
+          }
+          .project-languages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 20px 0 15px 0px;
+            div:first-child{
+              animation: floatText 2.5s ease-in-out alternate infinite;
+              animation-delay: -1s;
+            }
+            div:nth-child(2){
+              animation: floatText 2.5s ease-in-out alternate infinite;
+              animation-delay: -1.5s;
+            }
+            div:nth-child(3){
+              animation: floatText 2.5s ease-in-out alternate infinite;
+              animation-delay: -2s;
+            }
+            div {
+              border: black 5px solid;
+              height: 75px;
+              width: 75px;
+              background: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 200px;
+              margin: 10px 10px;
+              .plang {
+                content: url("../../assets/images/logo.svg");
+                width: 60px;
+                height: 60px;
+                color: white;
+              }
+              .react {
+                content: url("../../assets/images/Planguages/react.svg");
+                width:60px;
+                height: 60px;
+                color: white;
+              }
+              .java {
+                content: url("../../assets/images/Planguages/java.svg");
+                width:60px;
+                height: 60px;
+                color: white;
+              }
+              .firebase {
+                content: url("../../assets/images/Planguages/firebase.svg");
+                width:60px;
+                height: 60px;
+                color: white;
+              }
+            } 
+          }
+          .project-previews {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            align-items: center;
+            justify-content: flex-end;
+            transition: transform 0.5s;
+            -webkit-transition: transform 0.5s;
+            -moz-transition: transform 0.5s;
+            -o-transition: transform 0.5s;
+            div {
+              padding: 0 20px;
+            }
+            div img {
+              width: 180px;
+            }
+          }
+        }
+        .right-section {
+          flex: 1;
+          display: flex;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          justify-content: center;
+          .phone{
+            height: 575px;
+            position: absolute;
+            z-index: -1;
+          }
+          img:nth-child(2) {
+            height: 500px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    .footer-logo {
+      width: 200px;
+      cursor: pointer;
+    }
+  }
+  @keyframes floatText{
+    from{
+        transform: translatey(-10px);
+    }
+    to{
+        transform: translatey(10px);
+    }
+  }

@@ -19,6 +19,7 @@
         flex: 1;
       }
       .right-section {
+        position: relative;
         padding: 20px;
         flex: 1;
         display: flex;
@@ -31,29 +32,44 @@
           align-items: center;
           flex-direction: column;
           position: relative;
+          animation: fadeIn 1s ease-in;
           h1 {
+            width: 500px;
             position: absolute;
             top: -100px;
-            font-family: "TranscendsGames";
+            font-family: "Maassslicer";
             font-size: 80px;
-            background: -webkit-linear-gradient(#dadada, #b4b4b4);
+            background: -webkit-linear-gradient(#c50000, rgb(255, 0, 0));
+            //background: -webkit-linear-gradient(#dadada, #b4b4b4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
             margin: 0;
+            padding-left: 40px;
+            letter-spacing: 10px;
             animation: floatText 2s ease-in-out infinite alternate;
           }
-          h2 {
+          span:first-of-type {
             font-family: "Leculier";
-            font-size: 20px;
+            font-size: 19px;
             margin: 3px;
-            background: -webkit-linear-gradient(#c50000, rgb(255, 0, 0));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            text-align: center;
+            width: 500px;
+            color: white;
+            // background: -webkit-linear-gradient(#dadada, #b4b4b4);
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
           .name-description {
+            background: rgba(0,0,0,.80);
+            width: 500px;
+            padding: 5px 15px;
             text-align: center;
-            font-size: 14px;
+            font-size: 16px;
             color: white;
             font-family: "Abel";
           }
@@ -92,8 +108,44 @@
                 height: 100%;
                 background-color: red;
                 border-radius: 3px;
+                width: 0%;
+                transition: 1s;
               }
             }
+          }
+        }
+        .member-navigation{
+          cursor: pointer;
+          margin-top: 20px;
+          width: 100%;
+          position: absolute;
+          top: 160px;
+          display: flex;
+          justify-content: space-between;
+          color: red;
+          font-family: "Abel";
+          font-size: 15px;
+          font-weight: 900;
+          i{
+              width: 40px;
+              background: transparent;
+          }
+          i:hover{
+            box-shadow: 0 0 15px red;
+            transition: .5s;
+            border-radius: 100px;
+          }
+          .icon-previous{
+            transition: .5s;
+            box-shadow: 0 0 0 transparent;
+            content: url('../../assets/images/circle-arrow-previous.svg');
+            margin-left: 30px;
+          }
+          .icon-next{
+            transition: .5s;
+            box-shadow: 0 0 0 transparent;
+            content: url('../../assets/images/circle-arrow-next.svg');
+            margin-right: 30px;
           }
         }
       }
@@ -123,6 +175,14 @@
     cursor: pointer;
   }
 }
+@keyframes fadeEffect{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
 @keyframes floatText{
   from{
       transform: translatey(0px);
@@ -140,7 +200,8 @@
   .angular .bar,
   .mysql .bar,
   .laravel .bar {
-    width: 100%;
+    width: 100% !important;
+    transition: 1s;
   }
   .wordpress {
     display: none;
@@ -149,25 +210,32 @@
 /*            Justin STATS               */
 .justin {
   .html .bar {
-    width: 80%;
+    width: 80% !important;
+    transition: 1s;
   }
   .php .bar {
-    width: 90%;
+    width: 90% !important;
+    transition: 1s;
   }
   .jsjq .bar {
-    width: 95%;
+    width: 95% !important;
+    transition: 1s;
   }
   .reactjs .bar {
-    width: 85%;
+    width: 85% !important;
+    transition: 1s;
   }
   .angular .bar {
-    width: 80%;
+    width: 80% !important;
+    transition: 1s;
   }
   .mysql .bar {
-    width: 75%;
+    width: 75% !important;
+    transition: 1s;
   }
   .laravel .bar {
-    width: 80%;
+    width: 80% !important;
+    transition: 1s;
   }
   .wordpress {
     display: none;
@@ -177,20 +245,25 @@
 .robert {
   .html .bar,
   .php .bar {
-    width: 80%;
+    width: 80% !important;
+    transition: 1s;
   }
   .jsjq .bar {
-    width: 85%;
+    width: 85% !important;
+    transition: 1s;
   }
   .reactjs .bar,
   .mysql .bar {
-    width: 80%;
+    width: 80% !important;
+    transition: 1s;
   }
   .wordpress .bar {
-    width: 70%;
+    width: 70% !important;
+    transition: 1s;
   }
   .angular .bar {
-    width: 50%;
+    width: 50% !important;
+    transition: 1s;
   }
   .laravel {
     display: none;
@@ -199,23 +272,29 @@
 /*            Jurris STATS               */
 .jurris {
   .html .bar {
-    width: 85%;
+    width: 85% !important;
+    transition: 1s;
   }
   .jsjq .bar {
-    width: 50%;
+    width: 50% !important;
+    transition: 1s;
   }
   .ae .bar,
   .xd .bar {
-    width: 65%;
+    width: 65% !important;
+    transition: 1s;
   }
   .illustrator .bar {
-    width: 80%;
+    width: 80% !important;
+    transition: 1s;
   }
   .photoshop .bar {
-    width: 85%;
+    width: 85% !important;
+    transition: 1s;
   }
   .wordpress .bar {
-    width: 80%;
+    width: 80% !important;
+    transition: 1s;
   }
 }
 .jurris .php,

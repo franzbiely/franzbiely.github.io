@@ -11,6 +11,11 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TeamComponent } from './team/team.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
+import { TestComponent } from './test/test.component';
+import { OwlModule } from 'ngx-owl-carousel';
+import { Project1Component } from './project1/project1.component';
+import { Project2Component } from './project2/project2.component';
+import { Project3Component } from './project3/project3.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +25,14 @@ import { ProjectViewComponent } from './project-view/project-view.component';
     ContactComponent,
     ProjectsComponent,
     TeamComponent,
-    ProjectViewComponent
+    ProjectViewComponent,
+    TestComponent,
+    Project1Component,
+    Project2Component,
+    Project3Component
   ],
   imports: [
+    OwlModule,
     BrowserModule,
     AppRoutingModule,
     ParticlesModule,
@@ -35,6 +45,10 @@ import { ProjectViewComponent } from './project-view/project-view.component';
       { path: 'projects', component: ProjectsComponent, data: {animation: 'ProjectsPage'} },
       { path: 'team', component: TeamComponent, data: {animation: 'TeamPage'} },
       { path: 'project', component: ProjectViewComponent, data: {animation: 'ProjectPage'} },
+      { path: 'test', component: TestComponent, data: {animation: 'TestPage'} },
+      { path: 'project1', component: Project1Component, data: {animation: 'Project1'} },
+      { path: 'project2', component: Project2Component, data: {animation: 'Project2'} },
+      { path: 'project3', component: Project3Component, data: {animation: 'Project3'} }
     ])
 
 

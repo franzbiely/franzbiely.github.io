@@ -8,11 +8,16 @@
     align-items: center;
     overflow: hidden;
     .menu-container{
-        border-top: 1px red solid;
-        border-bottom: 1px red solid;
+        // border-top: 1px red solid;
+        // border-bottom: 1px red solid;
         display: flex;
         width: 100%;
         background: rgba(0,0,0,.5);
+        background-image: url(../../assets/images/bg-menu.svg), url(../../assets/images/bg-menu-2.svg);
+        background-repeat: no-repeat;
+        background-position: top, bottom;
+        background-size: 100%;
+
         .left-section{
             padding: 30px 0 30px 30px;
             display: flex;

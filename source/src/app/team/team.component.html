@@ -5,13 +5,13 @@
       </div>
       <div class="right-section">
         <div class="name-container">
-          <h1>Francis</h1>
-          <h2>Project Manager</h2> 
-          <span class="name-description">
-            Artificer's Team Leader. A Senior Front and Backend Developer.
+          <h1 id="name">Justin</h1>
+          <span id="role">Front-End Developer Back-End Developer</span><br>
+          <span class="name-description" id="description">
+              Justin is an intermediate full stack Web developer.
           </span>
         </div>
-        <div id="skill-container" class="skills-set-container sir" style="color:white;">
+        <div id="skill-container" class="skills-set-container justin" style="color:white;">
             <div class="skills-wrapper">
               <div class="skill html">
                 <span class="skill-title">HTML / CSS</span>
@@ -63,13 +63,35 @@
               </div>
             </div>
           </div>
+          <div class="member-navigation">
+            <a (click)="previousMember()" class="previous">
+              <i  class="icon-previous"></i>
+              <!-- <span>Previous Member</span>  -->
+            </a>
+            <a (click)="nextMember()" class="next">
+              <i  class="icon-next"></i>
+              <!-- <span>Next Member</span> -->
+            </a>
+          </div>
       </div>
     </div>
   </div>
-  <div class="member-picture">
-    <img src="../../assets/images/Members/robert.png">
+  <div class="member-picture" id="member-image">
+    <img src="../../assets/images/Members/justin.png">
   </div>
 </div>
 <div class="footer">
-  <img (click)="toHome()" class="footer-logo" src="../../assets/images/logo_footer.svg"/>
+  <img routerLink="/home" class="footer-logo" src="../../assets/images/logo_footer.svg"/>
 </div>
+
+<!-- JavaScript -->
+  <!-- <owl-carousel [options]="carouselOptions" [items]="members" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+    <div class="item" *ngFor="let member of members;let i= index">
+      <img class="slide-image" src="{{member.image}}" >
+      <div class="slide-text">
+        <h4 style="color:white; font-size: 20px;"> {{member.name}}</h4>
+      </div>
+    </div>
+  </owl-carousel>
+  <div style="background-color: red;" class='nav-btn prev-slide'></div>
+  <div style="background-color: red;" class='nav-btn next-slide'></div> -->
