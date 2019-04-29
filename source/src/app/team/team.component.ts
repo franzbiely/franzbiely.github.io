@@ -44,7 +44,6 @@ export class TeamComponent implements OnInit {
     this.imageDisplay = this.images[this.memberCount];
     this.descriptionDisplay = this.descriptions[this.memberCount];
     this.nameDisplay = this.membersName[this.memberCount];
-    alert(this.memberCount);
     this.positionDisplay = this.positions[this.memberCount];
     skillSetContainer.classList.remove(this.members[this.memberCount + 1]);
     document.getElementById("description").innerHTML = this.descriptionDisplay;
