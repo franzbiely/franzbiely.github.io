@@ -4,6 +4,7 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaSkype } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubAlt } from "react-icons/fa";
+import { HiOutlineChevronRight } from "react-icons/hi";
 import {
   CarouselProvider,
   Slider,
@@ -76,218 +77,456 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="professional">
-          <p>
-            as a
-            <span className="textBold"> Professional Software Engineer</span>
-            <br />I have been engaged with different technologies in Javascript,
-            and PHP Stacks. Below are
-            <br />
-            <span>some of the recent stack I have used: </span>
-          </p>
-        </div>
-        <div className="logos-container">
-          <div className="logos-leftSide">
-            <div className="logo-row">
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/js.jpg")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/reactjs.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/vue.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/angular.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/jquery.png")}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="logo-row2">
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/gatsby.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/nuxtjs.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/nextjs.png")}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="logo-row3">
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/nestjs.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/nodejs.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/electron.png")}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="logo-row4">
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/mongodb.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/mysql.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/postman.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/graphql.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="language-logo"
-                  src={require("../images/logos/restApi.png")}
-                  alt=""
-                />
-              </div>
+        <CarouselProvider
+          naturalSlideWidth={130}
+          naturalSlideHeight={60}
+          totalSlides={2}
+        >
+          <div className="logo-slider">
+            <Slider>
+              <Slide>
+                <div className="professional">
+                  <p>
+                    as a
+                    <span className="textBold">
+                      {" "}
+                      Professional Software Engineer
+                    </span>
+                    <br />I have been engaged with different technologies in
+                    Javascript, and PHP Stacks. Below are
+                    <br />
+                    <span>some of the recent stack I have used: </span>
+                  </p>
+                </div>
+                <div className="logos-container">
+                  <div className="logos-leftSide">
+                    <div className="logo-row">
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/js.jpg")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/reactjs.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/vue.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/angular.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/jquery.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="logo-row2">
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/gatsby.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/nuxtjs.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/nextjs.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="logo-row3">
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/nestjs.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/nodejs.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/electron.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="logo-row4">
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/mongodb.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/mysql.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/postman.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/graphql.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/restApi.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="logos-rightSide">
+                    <div className="rightSide-row1">
+                      <img
+                        className="rightSide-logo"
+                        src={require("../images/logos/cloudfront.png")}
+                        alt=""
+                      />
+                      <span className="logos-rightSideText">CloudFront</span>
+                    </div>
+                    <div className="rightSide-row1">
+                      <img
+                        className="rightSide-logo"
+                        src={require("../images/logos/lambda.png")}
+                        alt=""
+                      />
+                      <span className="logos-rightSideText">Lambda</span>
+                    </div>
+                    <div className="rightSide-row1">
+                      <img
+                        className="rightSide-logo"
+                        src={require("../images/logos/s3.png")}
+                        alt=""
+                      />
+                      <span className="logos-rightSideText">S3</span>
+                    </div>
+                    <div className="rightSide-row2">
+                      <div>
+                        <img
+                          className="rightSide-logo2"
+                          src={require("../images/logos/php.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="rightSide-logo2"
+                          src={require("../images/logos/laravel.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="rightSide-logo2"
+                          src={require("../images/logos/wordpress.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="rightSide-logo2"
+                          src={require("../images/logos/symfony.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="rightSide-row3">
+                      <div>
+                        <img
+                          className="agoraDocker-logo"
+                          src={require("../images/logos/agora.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="agoraDocker-logo"
+                          src={require("../images/logos/docker.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="proofOfWork">
+                    <span className="for-more">
+                      For more proof of work, <br />
+                      Please refer to my GitHub account
+                    </span>
+                  </div>
+                </div>
+              </Slide>
+              <Slide index={0}>
+                <div className="professional">
+                  <p>
+                    as a
+                    <span className="textBold">
+                      {" "}
+                      Professional Software Engineer
+                    </span>
+                    <br />I have been engaged with different technologies in
+                    Javascript, and PHP Stacks. Below are
+                    <br />
+                    <span>some of the recent stack I have used: </span>
+                  </p>
+                </div>
+                <div className="logos-container">
+                  <div className="logos-leftSide">
+                    <div className="logo-row">
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/js.jpg")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/reactjs.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/vue.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/angular.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/jquery.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="logo-row2">
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/gatsby.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/nuxtjs.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/nextjs.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="logo-row3">
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/nestjs.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/nodejs.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/electron.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="logo-row4">
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/mongodb.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/mysql.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/postman.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/graphql.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="language-logo"
+                          src={require("../images/logos/restApi.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="logos-rightSide">
+                    <div className="rightSide-row1">
+                      <img
+                        className="rightSide-logo"
+                        src={require("../images/logos/cloudfront.png")}
+                        alt=""
+                      />
+                      <span className="logos-rightSideText">CloudFront</span>
+                    </div>
+                    <div className="rightSide-row1">
+                      <img
+                        className="rightSide-logo"
+                        src={require("../images/logos/lambda.png")}
+                        alt=""
+                      />
+                      <span className="logos-rightSideText">Lambda</span>
+                    </div>
+                    <div className="rightSide-row1">
+                      <img
+                        className="rightSide-logo"
+                        src={require("../images/logos/s3.png")}
+                        alt=""
+                      />
+                      <span className="logos-rightSideText">S3</span>
+                    </div>
+                    <div className="rightSide-row2">
+                      <div>
+                        <img
+                          className="rightSide-logo2"
+                          src={require("../images/logos/php.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="rightSide-logo2"
+                          src={require("../images/logos/laravel.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="rightSide-logo2"
+                          src={require("../images/logos/wordpress.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="rightSide-logo2"
+                          src={require("../images/logos/symfony.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="rightSide-row3">
+                      <div>
+                        <img
+                          className="agoraDocker-logo"
+                          src={require("../images/logos/agora.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <img
+                          className="agoraDocker-logo"
+                          src={require("../images/logos/docker.png")}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="proofOfWork">
+                    <span className="for-more">
+                      For more proof of work, <br />
+                      Please refer to my GitHub account
+                    </span>
+                  </div>
+                </div>
+              </Slide>
+            </Slider>
+            <div className="button-logo">
+              <ButtonNext className="button-Slide-next">
+                <HiOutlineChevronRight size={90} className="button-slide" />
+              </ButtonNext>
             </div>
           </div>
-          <div className="logos-rightSide">
-            <div className="rightSide-row1">
-              <img
-                className="rightSide-logo"
-                src={require("../images/logos/cloudfront.png")}
-                alt=""
-              />
-              <span className="logos-rightSideText">CloudFront</span>
-            </div>
-            <div className="rightSide-row1">
-              <img
-                className="rightSide-logo"
-                src={require("../images/logos/lambda.png")}
-                alt=""
-              />
-              <span className="logos-rightSideText">Lambda</span>
-            </div>
-            <div className="rightSide-row1">
-              <img
-                className="rightSide-logo"
-                src={require("../images/logos/s3.png")}
-                alt=""
-              />
-              <span className="logos-rightSideText">S3</span>
-            </div>
-            <div className="rightSide-row2">
-              <div>
-                <img
-                  className="rightSide-logo2"
-                  src={require("../images/logos/php.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="rightSide-logo2"
-                  src={require("../images/logos/laravel.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="rightSide-logo2"
-                  src={require("../images/logos/wordpress.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="rightSide-logo2"
-                  src={require("../images/logos/symfony.png")}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="rightSide-row3">
-              <div>
-                <img
-                  className="agoraDocker-logo"
-                  src={require("../images/logos/agora.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  className="agoraDocker-logo"
-                  src={require("../images/logos/docker.png")}
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div className="proofOfWork">
-            <span className="for-more">
-              For more proof of work, <br />
-              Please refer to my GitHub accout
-            </span>
-          </div>
-        </div>
+        </CarouselProvider>
+
         <div className="feedback-container">
           <div>
             <SliderView />

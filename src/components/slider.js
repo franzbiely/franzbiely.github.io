@@ -22,7 +22,7 @@ export default function SliderView() {
     >
       <Slider>
         <Slide index={0}>
-          <div className="comment-section">
+          <div className="comment-section fade">
             <img className="imageInComment" src={junrillGalvez} alt="" />
             <span className="commentText">
               <span className="cname">Junrill Galvez</span>
@@ -41,7 +41,7 @@ export default function SliderView() {
           </div>
         </Slide>
         <Slide index={0}>
-          <div className="comment-section">
+          <div className="comment-section fade">
             <img className="imageInComment" src={CocoLi} alt="" />
             <span className="commentText">
               <span className="cname">Coco Li </span>
@@ -61,7 +61,7 @@ export default function SliderView() {
           </div>
         </Slide>
         <Slide index={0}>
-          <div className="comment-section">
+          <div className="comment-section fade">
             <img className="imageInComment" src={Schilt} alt="" />
             <span className="commentText">
               <span className="cname">Robert Schilt</span>
@@ -81,7 +81,7 @@ export default function SliderView() {
           </div>
         </Slide>
       </Slider>
-      <div className="buttonss">
+      <div className="buttons">
         <div className="back-btn">
           <ButtonBack className="button-back">
             <FiChevronLeft size={90} className="arrow-left" />
