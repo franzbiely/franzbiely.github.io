@@ -14,6 +14,7 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import SliderView from "./slider";
+import "animate.css";
 
 export default function HomePage() {
   return (
@@ -81,6 +82,9 @@ export default function HomePage() {
           naturalSlideWidth={130}
           naturalSlideHeight={60}
           totalSlides={2}
+          infinite
+          isPlaying
+          interval={5000}
         >
           <div className="logo-slider">
             <Slider>
@@ -526,7 +530,6 @@ export default function HomePage() {
             </div>
           </div>
         </CarouselProvider>
-
         <div className="feedback-container">
           <div>
             <SliderView />

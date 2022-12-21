@@ -10,6 +10,7 @@ import {
   Slide,
   ButtonBack,
   ButtonNext,
+  ButtonPlay,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
@@ -19,10 +20,15 @@ export default function SliderView() {
       naturalSlideWidth={130}
       naturalSlideHeight={40}
       totalSlides={3}
+      infinite
+      isPlaying
+      interval={5000}
+      // touchEnabled={false}
+      // dragEnabled={false}
     >
       <Slider>
         <Slide index={0}>
-          <div className="comment-section fade">
+          <div className="comment-section">
             <img className="imageInComment" src={junrillGalvez} alt="" />
             <span className="commentText">
               <span className="cname">Junrill Galvez</span>
@@ -41,7 +47,7 @@ export default function SliderView() {
           </div>
         </Slide>
         <Slide index={0}>
-          <div className="comment-section fade">
+          <div className="comment-section">
             <img className="imageInComment" src={CocoLi} alt="" />
             <span className="commentText">
               <span className="cname">Coco Li </span>
@@ -61,7 +67,7 @@ export default function SliderView() {
           </div>
         </Slide>
         <Slide index={0}>
-          <div className="comment-section fade">
+          <div className="comment-section">
             <img className="imageInComment" src={Schilt} alt="" />
             <span className="commentText">
               <span className="cname">Robert Schilt</span>
