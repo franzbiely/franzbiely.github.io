@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import displayImage from "../images/me3.jpeg";
 import { FaEnvelope } from "react-icons/fa";
 import { FaSkype } from "react-icons/fa";
@@ -15,8 +15,24 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import SliderView from "./slider";
 import "animate.css";
-
+import BounceLoader from "react-spinners/BounceLoader";
 export default function HomePage() {
+  const [style, setStyle] = useState("cont");
+
+  const changeStyle = () => {
+    console.log("you just clicked");
+
+    setStyle("cont2");
+  };
+
+  function Tooltip({ children, title, position }) {
+    return (
+      <div className={`tooltip`} data-position={position} data-tool-tip={title}>
+        {children}
+      </div>
+    );
+  }
+
   return (
     <div className="container">
       <div className="big-image">
@@ -105,14 +121,26 @@ export default function HomePage() {
                 <div className="logos-container">
                   <div className="logos-leftSide">
                     <div className="logo-row">
-                      <div>
+                      <div className="logo-item">
+                        <Tooltip title="Top Tooltip" position="top">
+                          <div className="tooltip2">
+                            HELLO
+                            <BounceLoader color="#36d7b7" />
+                          </div>
+                        </Tooltip>
                         <img
                           className="language-logo"
                           src={require("../images/logos/js.jpg")}
                           alt=""
                         />
                       </div>
-                      <div>
+                      <div className="logo-item">
+                        <Tooltip title="Top Tooltip" position="top">
+                          <div>
+                            HELLO
+                            <BounceLoader color="#36d7b7" />
+                          </div>
+                        </Tooltip>
                         <img
                           className="language-logo"
                           src={require("../images/logos/reactjs.png")}
@@ -188,12 +216,16 @@ export default function HomePage() {
                       </div>
                     </div>
                     <div className="logo-row4">
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/mongodb.png")}
-                          alt=""
-                        />
+                      <div className="showcase">
+                        <Tooltip title="Top Tooltip" position="top">
+                          <span>
+                            <img
+                              className="language-logo"
+                              src={require("../images/logos/mongodb.png")}
+                              alt=""
+                            />
+                          </span>
+                        </Tooltip>
                       </div>
                       <div>
                         <img
@@ -530,6 +562,11 @@ export default function HomePage() {
             </div>
           </div>
         </CarouselProvider>
+        <div className={style}>
+          <button className="buttonx" onClick={changeStyle}>
+            Click me!
+          </button>
+        </div>
         <div className="feedback-container">
           <div>
             <SliderView />
