@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c5dd1901.css",
+    "main.js": "/static/js/main.0b515187.js",
+    "static/js/787.a0f36e4e.chunk.js": "/static/js/787.a0f36e4e.chunk.js",
+    "static/media/me3.jpeg": "/static/media/me3.baa6107aaf90040b257d.jpeg",
+    "static/media/laravel.png": "/static/media/laravel.9b6b91516e92adb03fb5.png",
+    "static/media/electron.png": "/static/media/electron.4c04c5208e32bcca89b3.png",
+    "static/media/symfony.png": "/static/media/symfony.a35d69abc5acd9697aea.png",
+    "static/media/nuxtjs.png": "/static/media/nuxtjs.66c280597e2f01ec083d.png",
+    "static/media/mongodb.png": "/static/media/mongodb.047b4dff38dcaf64091f.png",
+    "static/media/graphql.png": "/static/media/graphql.fc6b9451733c620ceb86.png",
+    "static/media/goku.jpg": "/static/media/goku.9f2bf4610d8b44b8fab2.jpg",
+    "static/media/angular.png": "/static/media/angular.a77785badf910e8598a7.png",
+    "static/media/Schilt.jpg": "/static/media/Schilt.fa6f2ad055d95ae64f7c.jpg",
+    "static/media/mysql.png": "/static/media/mysql.4046c671384cdedb0283.png",
+    "static/media/vue.png": "/static/media/vue.1eafbd69d7822a229427.png",
+    "static/media/js.jpg": "/static/media/js.2a1410b38a792b28dbc2.jpg",
+    "static/media/lambda.png": "/static/media/lambda.17141f1691e5fb6fc0ea.png",
+    "static/media/s3.png": "/static/media/s3.e1f2a53b0a5f5157f317.png",
+    "static/media/docker.png": "/static/media/docker.b5326d1901a2b402faf6.png",
+    "static/media/wordpress.png": "/static/media/wordpress.f3193f7d1cd9a9908937.png",
+    "static/media/reactjs.png": "/static/media/reactjs.c2a6ac864c4ccb52e12e.png",
+    "static/media/Coco.png": "/static/media/Coco.3f897c73844a55c5e727.png",
+    "static/media/cloudfront.png": "/static/media/cloudfront.98358094e291b16b12c9.png",
+    "static/media/nodejs.png": "/static/media/nodejs.cc8d1997a6ed0466d52e.png",
+    "index.html": "/index.html",
+    "main.c5dd1901.css.map": "/static/css/main.c5dd1901.css.map",
+    "main.0b515187.js.map": "/static/js/main.0b515187.js.map",
+    "787.a0f36e4e.chunk.js.map": "/static/js/787.a0f36e4e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5dd1901.css",
+    "static/js/main.0b515187.js"
+  ]
+}

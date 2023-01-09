@@ -340,6 +340,7 @@ margin-left: -760px;
 
   }
   .cont2 {
+    display: none;
     width: 250px;
     height: 250px;
     margin-top: 50px;
