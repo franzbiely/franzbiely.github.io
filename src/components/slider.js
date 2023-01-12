@@ -1,5 +1,5 @@
 import React from "react";
-import junrillGalvez from "../images/goku.jpg";
+import junrillGalvez from "../images/Junrill.png";
 import CocoLi from "../images/Coco.png";
 import Schilt from "../images/Schilt.jpg";
 import { FiChevronLeft } from "react-icons/fi";
@@ -10,7 +10,6 @@ import {
   Slide,
   ButtonBack,
   ButtonNext,
-  ButtonPlay,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
@@ -23,8 +22,6 @@ export default function SliderView() {
       infinite
       isPlaying
       interval={5000}
-      // touchEnabled={false}
-      // dragEnabled={false}
     >
       <Slider>
         <Slide index={0}>

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useState } from "react";
 import displayImage from "../images/me3.jpeg";
 import { FaEnvelope } from "react-icons/fa";
@@ -9,7 +10,6 @@ import {
   CarouselProvider,
   Slider,
   Slide,
-  ButtonBack,
   ButtonNext,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
@@ -17,13 +17,327 @@ import SliderView from "./slider";
 import "animate.css";
 import BounceLoader from "react-spinners/BounceLoader";
 export default function HomePage() {
-  const [style, setStyle] = useState("cont");
-
-  const changeStyle = () => {
-    console.log("you just clicked");
-
-    setStyle("cont2");
-  };
+  const imageList1 = [
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <img
+                src={require("../images/gif/Js.gif")}
+                alt=""
+                className="tooltipContent"
+              />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/js.jpg"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/reactjs.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/vue.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/angular.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/jquery.png"),
+    },
+  ];
+  const imageList2 = [
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/gatsby.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/nuxtjs.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/nextjs.png"),
+    },
+  ];
+  const imageList3 = [
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/nestjs.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/nodejs.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/electron.png"),
+    },
+  ];
+  const imageList4 = [
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/mongodb.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/mysql.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/postman.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/graphql.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/restApi.png"),
+    },
+  ];
+  const imageListRight2 = [
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/php.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/laravel.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/wordpress.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/symfony.png"),
+    },
+  ];
+  const imageListRight3 = [
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/agora.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/docker.png"),
+    },
+  ];
+  const imageListRight1 = [
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/cloudfront.png"),
+      iconText: "CloudFront",
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/lambda.png"),
+      iconText: "Lambda",
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <BounceLoader color="#36d7b7" />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/s3.png"),
+      iconText: "S3",
+    },
+  ];
 
   function Tooltip({ children, title, position }) {
     return (
@@ -63,7 +377,11 @@ export default function HomePage() {
                 <FaEnvelope size={18} color="#183153" />
               </div>
               <div className="textIcon">
-                <span>mrthemetribe@gmail.com</span>
+                <span>
+                  <a href="mailto:" className="mailto">
+                    mrthemetribe@gmail.com
+                  </a>
+                </span>
               </div>
             </div>
             <div className="iconWithText">
@@ -71,7 +389,11 @@ export default function HomePage() {
                 <FaSkype size={18} color="#183153" />
               </div>
               <div className="textIcon">
-                <span>francis.albores</span>
+                <span>
+                  <a href="mailto:" className="mailto">
+                    francis.albores
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -81,7 +403,11 @@ export default function HomePage() {
                 <FaLinkedin size={18} color="#183153" />
               </div>
               <div className="textIcon">
-                <span>francisalbores</span>
+                <span>
+                  <a href="mailto:mrthemetribe@gmail.com" className="mailto">
+                    francisalbores
+                  </a>
+                </span>
               </div>
             </div>
             <div className="githubText">
@@ -89,7 +415,11 @@ export default function HomePage() {
                 <FaGithubAlt size={18} color="#183153" />
               </div>
               <div className="textIcon">
-                <span>franzbiely</span>
+                <span>
+                  <a href="mailto:" className="mailto">
+                    franzbiely
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -121,230 +451,113 @@ export default function HomePage() {
                 <div className="logos-container">
                   <div className="logos-leftSide">
                     <div className="logo-row">
-                      <div className="logo-item">
-                        <Tooltip title="Top Tooltip" position="top">
-                          <div className="tooltip2">
-                            HELLO
-                            <BounceLoader color="#36d7b7" />
-                          </div>
-                        </Tooltip>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/js.jpg")}
-                          alt=""
-                        />
-                      </div>
-                      <div className="logo-item">
-                        <Tooltip title="Top Tooltip" position="top">
-                          <div>
-                            HELLO
-                            <BounceLoader color="#36d7b7" />
-                          </div>
-                        </Tooltip>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/reactjs.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/vue.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/angular.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/jquery.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageList1.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="language-logo"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                     <div className="logo-row2">
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/gatsby.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/nuxtjs.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/nextjs.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageList2.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="language-logo"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                     <div className="logo-row3">
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/nestjs.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/nodejs.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/electron.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageList3.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="language-logo"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                     <div className="logo-row4">
-                      <div className="showcase">
-                        <Tooltip title="Top Tooltip" position="top">
-                          <span>
-                            <img
-                              className="language-logo"
-                              src={require("../images/logos/mongodb.png")}
-                              alt=""
-                            />
-                          </span>
-                        </Tooltip>
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/mysql.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/postman.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/graphql.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/restApi.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageList4.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="language-logo"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                   </div>
                   <div className="logos-rightSide">
                     <div className="rightSide-row1">
-                      <img
-                        className="rightSide-logo"
-                        src={require("../images/logos/cloudfront.png")}
-                        alt=""
-                      />
-                      <span className="logos-rightSideText">CloudFront</span>
-                    </div>
-                    <div className="rightSide-row1">
-                      <img
-                        className="rightSide-logo"
-                        src={require("../images/logos/lambda.png")}
-                        alt=""
-                      />
-                      <span className="logos-rightSideText">Lambda</span>
-                    </div>
-                    <div className="rightSide-row1">
-                      <img
-                        className="rightSide-logo"
-                        src={require("../images/logos/s3.png")}
-                        alt=""
-                      />
-                      <span className="logos-rightSideText">S3</span>
+                      {imageListRight1.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <div className="hov">
+                            <img
+                              src={item.src}
+                              className="rightSide-logo2c"
+                              alt=""
+                            />
+                            <div className="logos-rightSideText">
+                              {item.iconText}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                     <div className="rightSide-row2">
-                      <div>
-                        <img
-                          className="rightSide-logo2"
-                          src={require("../images/logos/php.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="rightSide-logo2"
-                          src={require("../images/logos/laravel.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="rightSide-logo2"
-                          src={require("../images/logos/wordpress.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="rightSide-logo2"
-                          src={require("../images/logos/symfony.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageListRight2.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="rightSide-logo2"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                     <div className="rightSide-row3">
-                      <div>
-                        <img
-                          className="agoraDocker-logo"
-                          src={require("../images/logos/agora.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="agoraDocker-logo"
-                          src={require("../images/logos/docker.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageListRight3.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="rightSide-logo2"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                   </div>
                   <div className="proofOfWork">
-                    <span className="for-more">
+                    <a
+                      href="https://github.com/franzbiely"
+                      target="_blank"
+                      className="redirect-link"
+                    >
                       For more proof of work, <br />
                       Please refer to my GitHub account
-                    </span>
+                    </a>
                   </div>
                 </div>
               </Slide>
-              <Slide index={0}>
+              <Slide>
                 <div className="professional">
                   <p>
-                    as a
-                    <span className="textBold">
-                      {" "}
-                      Professional Software Engineer
-                    </span>
+                    as a<span className="textBold"> Mobile Developer</span>
                     <br />I have been engaged with different technologies in
                     Javascript, and PHP Stacks. Below are
                     <br />
@@ -354,203 +567,106 @@ export default function HomePage() {
                 <div className="logos-container">
                   <div className="logos-leftSide">
                     <div className="logo-row">
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/js.jpg")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/reactjs.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/vue.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/angular.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/jquery.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageList1.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="language-logo"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                     <div className="logo-row2">
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/gatsby.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/nuxtjs.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/nextjs.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageList2.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="language-logo"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                     <div className="logo-row3">
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/nestjs.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/nodejs.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/electron.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageList3.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="language-logo"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                     <div className="logo-row4">
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/mongodb.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/mysql.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/postman.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/graphql.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="language-logo"
-                          src={require("../images/logos/restApi.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageList4.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="language-logo"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                   </div>
                   <div className="logos-rightSide">
                     <div className="rightSide-row1">
-                      <img
-                        className="rightSide-logo"
-                        src={require("../images/logos/cloudfront.png")}
-                        alt=""
-                      />
-                      <span className="logos-rightSideText">CloudFront</span>
-                    </div>
-                    <div className="rightSide-row1">
-                      <img
-                        className="rightSide-logo"
-                        src={require("../images/logos/lambda.png")}
-                        alt=""
-                      />
-                      <span className="logos-rightSideText">Lambda</span>
-                    </div>
-                    <div className="rightSide-row1">
-                      <img
-                        className="rightSide-logo"
-                        src={require("../images/logos/s3.png")}
-                        alt=""
-                      />
-                      <span className="logos-rightSideText">S3</span>
+                      {imageListRight1.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <div className="hov">
+                            <img
+                              src={item.src}
+                              className="rightSide-logo2c"
+                              alt=""
+                            />
+                            <div className="logos-rightSideText">
+                              {item.iconText}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                     <div className="rightSide-row2">
-                      <div>
-                        <img
-                          className="rightSide-logo2"
-                          src={require("../images/logos/php.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="rightSide-logo2"
-                          src={require("../images/logos/laravel.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="rightSide-logo2"
-                          src={require("../images/logos/wordpress.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="rightSide-logo2"
-                          src={require("../images/logos/symfony.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageListRight2.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="rightSide-logo2"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                     <div className="rightSide-row3">
-                      <div>
-                        <img
-                          className="agoraDocker-logo"
-                          src={require("../images/logos/agora.png")}
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <img
-                          className="agoraDocker-logo"
-                          src={require("../images/logos/docker.png")}
-                          alt=""
-                        />
-                      </div>
+                      {imageListRight3.map((item) => (
+                        <div className="logo-item">
+                          {item.content}
+                          <img
+                            src={item.src}
+                            className="rightSide-logo2"
+                            alt=""
+                          />
+                        </div>
+                      ))}
                     </div>
                   </div>
                   <div className="proofOfWork">
-                    <span className="for-more">
+                    <a
+                      href="https://github.com/franzbiely"
+                      className="redirect-link"
+                      target="_blank"
+                    >
                       For more proof of work, <br />
                       Please refer to my GitHub account
-                    </span>
+                    </a>
                   </div>
                 </div>
               </Slide>
@@ -562,22 +678,21 @@ export default function HomePage() {
             </div>
           </div>
         </CarouselProvider>
-        <div className={style}>
-          <button className="buttonx" onClick={changeStyle}>
-            Click me!
-          </button>
-        </div>
         <div className="feedback-container">
           <div>
             <SliderView />
           </div>
         </div>
         <div className="testimonies">
-          <span className="for-more">
+          <a
+            href="https://www.linkedin.com/in/francisalbores/"
+            target="_blank"
+            className="redirect-link"
+          >
             For more testimonies from other people,
             <br />
             Please refer to my LinkedIn accout
-          </span>
+          </a>
         </div>
       </div>
     </div>

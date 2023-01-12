@@ -4,6 +4,7 @@
     text-align: center;
     /* position: fixed; */
 }
+
 .big-image {
     margin-left: -280px;
 }
@@ -43,13 +44,11 @@ p {
     margin-top: -12px;
     font-size: 15PX;
     font-family: 'Lexend', sans-serif;
- 
   }
 .contact-container {
     margin-top: 18px;
     text-align: left;
     margin-left: 15px;
-
 }
 .contacts {
     flex-direction: row;
@@ -74,7 +73,12 @@ p {
 .textIcon {
     font-family: 'Lexend', sans-serif;
 }
-
+.mailto {
+    color: #000000;
+}
+.text-email {
+    margin-top: 2px;
+}
 .githubText {
     margin-left: 138px;
     display: flex;
@@ -95,20 +99,20 @@ p {
 .logos-container {
     display: flex;
     flex-direction: row;
-    
 }
 .logos-leftSide {
     text-align: left;
     margin-left: 30px;
     margin-top: -5px;
+    position: relative;
 }
 .logo-row {
     display: flex;
-    position: relative;
 }
 .logo-row2 {
     display: flex;
     margin-left: 78px;
+    flex-direction: row;
 }
 .logo-row3 {
     display: flex;
@@ -125,27 +129,28 @@ p {
     margin-top: 5px;
     transition: transform .3s;
 }
-.logo-item:hover .language-logo {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
+.language-logo:hover  {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
     transform: scale(1.5); 
     cursor: pointer;
 }
-.jquery-logo {
-    height: 50px;
-    width: 55px;
-    margin-left: 10px;
-    margin-top: 5px;
-}
+/* .logo-item:hover .language-logo {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5); 
+    cursor: pointer;
+} */
 .logos-rightSide {
     margin-left: 40px;
 }
 .rightSide-row1 {
     display: flex;
-    transition: transform .3s;
+    flex-direction: column;
 }
 .rightSide-row2 {
     display: flex;
+    margin-top: 15px;
 }
 .rightSide-row3 {
     display: flex;
@@ -157,11 +162,28 @@ p {
     margin-top: 5px;
     transition: transform .3s;
 }
-.rightSide-row1:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
+.hov {
+    text-align: left;
+    margin-top: 5px;
+    transition: transform .3s;
+}
+.hov:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
     transform: scale(1.3);
 }
+.rightSide-logo2c {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    margin-top: 18px;
+    transition: transform .3s;
+}
+/* .rightSide-row1:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.3);
+} */
 .rightSide-logo2 {
     height: 40px;
     width: 40px;
@@ -182,32 +204,51 @@ p {
     transition: transform .3s;
 }
 .agoraDocker-logo:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
     transform: scale(1.4);
 }
 .logos-rightSideText {
-    margin-top: 8px;
-    margin-left: 30px;
+    margin-top: -40px;
+    margin-left: 60px;
     font-size: 20px;
     font-weight: 500;
     color: #1E90FF;
     font-family: 'Lexend', sans-serif;
+    text-align: left;
 }
 .proofOfWork {
     margin-top: 80px;
     margin-left: -5x;
+    height: 50px;
     text-align: left;
+    font-weight: 100;
+    transition: transform .3s;
 }
+.proofOfWork:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+a:link {
+    text-decoration: none;
+  }
+a:hover {
+    color: #1E90FF;
+    background-color: transparent;
+    text-decoration: underline;
+  }
 .logos-slider {
     margin-left: 700px;
     margin-top: -150px;
 }
-.for-more {
+.redirect-link {
     font-size: 12px;
     font-weight: 600;
     color: #000080;
-    font-family: inherit;
+    position: relative;
+    font-family: 'Lexend', sans-serif;
 }
 
    /* Feedback */
@@ -216,6 +257,13 @@ p {
     align-self: flex-end;
     text-align: left;
     margin-left: 575px;
+    transition: transform .3s;
+}
+.testimonies:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.1); 
+    cursor: pointer;
 }
 .feedback-container{
     display: flex;
@@ -225,7 +273,6 @@ p {
     margin-top: -60px;
     margin-left: 90px;
 }
-
 .comment-section {
     display: flex;
     margin-top: 65px;
@@ -257,12 +304,8 @@ p {
     font-weight: 400;
     font-size: 12px;
 }
-/* .buttons-btn{
-    align-self: flex-start;
-} */
 .back-btn{
 margin-left: -760px;
-
 }
 .button-back {
     background-color: white;
@@ -281,7 +324,6 @@ margin-left: -760px;
     margin-top: -46px;
     margin-left: 690px;    
 }
-
 .button-next {
     background-color: white;
     border: none;
@@ -321,59 +363,19 @@ margin-left: -760px;
     color: rgba(216, 210, 210, 0.758);
 }
 
-/* --------------- */
-
-.cont {
+  /* ----------- Tooltip ---------- */
+  .tooltipContent{
     width: 300px;
     height: 300px;
-    margin-top: 50px;
-    margin-left: 150px;
-    background-color: violet;
-  }
-  .buttonx {
-    border-radius: 8px;
-    font-size: 20px;
-    background-color: red;
-    color: white;
-    margin-left: 70px;
-    margin-top: 100px;
-
-  }
-  .cont2 {
-    width: 250px;
-    height: 250px;
-    margin-top: 50px;
-    margin-left: 150px;
-    background-color: yellow;
-    transform: translatex(400px);
-    transition: transform 3s;
-  }
-
-
-  /* ----------- Tooltip ---------- */
-  .showcase[data-tool-tip]:hover::before {
-    width: fit-content(20px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 1rem;
-  }
-  .spans {
-    cursor: pointer;
-    border-radius: 4px;
-    color: red;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1rem;
-    margin: 0.5rem 0.5rem;
-    padding: 6px 16px;
-    background-color: rgba(255, 255, 255, 0.08);
-    display: inline-block;
-  }
+    margin-left: -6px;
+    object-fit: cover;
+}
   .tooltip[data-tool-tip] {
     position: relative;
+  }
+  .logo-item {
+    display: flex;
+    flex-direction: row;
   }
   .logo-item:hover .tooltip {
     visibility: visible;
@@ -390,7 +392,7 @@ margin-left: -760px;
     position: absolute;
     box-sizing: border-box;
     display: block;
-    margin: 0 auto;
+    margin-left: -115px;
     padding: 4px 8px;
     background-color: #5a5a5a;
     color: white;
@@ -401,14 +403,9 @@ margin-left: -760px;
     transition: opacity ease-out 150ms, bottom ease-out 150ms;
   }
   .tooltip[data-position='top'] {
-    bottom: 120%;
+    margin-left: 100px;
     width: 300px;
-    height: 100px;
-  }
-  .tooltip2 {
-    width: 10px;
-    height: 10px;
-    background-color: red;
+    height: 300px;
   }
   .arrow:after {
     background: black;
