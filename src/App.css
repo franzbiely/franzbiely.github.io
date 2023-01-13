@@ -363,8 +363,8 @@ margin-left: -760px;
     color: rgba(216, 210, 210, 0.758);
 }
 
-  /* ----------- Tooltip ---------- */
-  .tooltipContent{
+/* ----------- Tooltip ---------- */
+.tooltipContent{
     width: 300px;
     height: 300px;
     margin-left: -6px;
