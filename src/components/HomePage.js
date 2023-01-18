@@ -33,6 +33,7 @@ export default function HomePage() {
         </>
       ),
       src: require("../images/logos/js.jpg"),
+      redirect: "https://franzbiely.github.io/demo/bubble/dist/",
     },
     {
       content: (
@@ -339,6 +340,137 @@ export default function HomePage() {
     },
   ];
 
+  // ----------------Mobile---------------//
+  const mobileList1 = [
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <img
+                src={require("../images/gif/Js.gif")}
+                alt=""
+                className="tooltipContent"
+              />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/react-native.png"),
+      // redirect: "https://franzbiely.github.io/demo/bubble/dist/",
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <img
+                src={require("../images/gif/Js.gif")}
+                alt=""
+                className="tooltipContent"
+              />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/appcenter.png"),
+      // redirect: "https://franzbiely.github.io/demo/bubble/dist/",
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <img
+                src={require("../images/gif/Js.gif")}
+                alt=""
+                className="tooltipContent"
+              />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/expo.png"),
+      // redirect: "https://franzbiely.github.io/demo/bubble/dist/",
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <img
+                src={require("../images/gif/Js.gif")}
+                alt=""
+                className="tooltipContent"
+              />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/firebase.png"),
+      // redirect: "https://franzbiely.github.io/demo/bubble/dist/",
+    },
+  ];
+
+  // ----------------IOT---------------//
+  const IOTList1 = [
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <img
+                // src={require("../images/gif/Js.gif")}
+                alt=""
+                className="tooltipContent"
+              />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/arduino.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <img
+                // src={require("../images/gif/Js.gif")}
+                alt=""
+                className="tooltipContent"
+              />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/tinkercad.png"),
+    },
+    {
+      content: (
+        <>
+          <Tooltip title="Top Tooltip" position="top">
+            <div>
+              <img
+                // src={require("../images/gif/Js.gif")}
+                alt=""
+                className="tooltipContent"
+              />
+            </div>
+          </Tooltip>
+        </>
+      ),
+      src: require("../images/logos/sketchup.png"),
+    },
+  ];
+
+  const [style, setStyle] = useState("big-image");
+  const changeStyle = () => {
+    console.log("you just clicked");
+
+    setStyle("big-image big-image2");
+  };
+
   function Tooltip({ children, title, position }) {
     return (
       <div className={`tooltip`} data-position={position} data-tool-tip={title}>
@@ -349,10 +481,10 @@ export default function HomePage() {
 
   return (
     <div className="container">
-      <div className="big-image">
-        <div>
-          <img className="display-Image" src={displayImage} alt="" />
-        </div>
+      <div className={style}>
+        {/* <div className="big-image"> */}
+        <img className="display-Image" src={displayImage} alt="" />
+        {/* </div> */}
       </div>
       <div className="details-container">
         <div className="fname">
@@ -424,10 +556,20 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        <div className="proofOfWork">
+          <a
+            href="https://github.com/franzbiely"
+            target="_blank"
+            className="redirect-link"
+          >
+            For more proof of work, <br />
+            Please refer to my GitHub account
+          </a>
+        </div>
         <CarouselProvider
           naturalSlideWidth={130}
-          naturalSlideHeight={60}
-          totalSlides={2}
+          naturalSlideHeight={80}
+          totalSlides={3}
           infinite
           isPlaying
           interval={5000}
@@ -454,11 +596,13 @@ export default function HomePage() {
                       {imageList1.map((item) => (
                         <div className="logo-item">
                           {item.content}
-                          <img
-                            src={item.src}
-                            className="language-logo"
-                            alt=""
-                          />
+                          <a href={item.redirect} target="_blank">
+                            <img
+                              src={item.src}
+                              className="language-logo"
+                              alt=""
+                            />
+                          </a>
                         </div>
                       ))}
                     </div>
@@ -541,69 +685,26 @@ export default function HomePage() {
                         </div>
                       ))}
                     </div>
-                  </div>
-                  <div className="proofOfWork">
-                    <a
-                      href="https://github.com/franzbiely"
-                      target="_blank"
-                      className="redirect-link"
-                    >
-                      For more proof of work, <br />
-                      Please refer to my GitHub account
-                    </a>
                   </div>
                 </div>
               </Slide>
               <Slide>
                 <div className="professional">
                   <p>
-                    as a<span className="textBold"> Mobile Developer</span>
-                    <br />I have been engaged with different technologies in
-                    Javascript, and PHP Stacks. Below are
+                    I am an experienced
+                    <span className="textBold"> Mobile Developer</span>
                     <br />
-                    <span>some of the recent stack I have used: </span>
+                    with a track record of success in designing and building
+                    mobile applications for various industries.
+                    <br />
+                    Familiar with tools such as React Native and appcenter.
+                    <span> Some of the recent stack I have used: </span>
                   </p>
                 </div>
                 <div className="logos-container">
                   <div className="logos-leftSide">
                     <div className="logo-row">
-                      {imageList1.map((item) => (
-                        <div className="logo-item">
-                          {item.content}
-                          <img
-                            src={item.src}
-                            className="language-logo"
-                            alt=""
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    <div className="logo-row2">
-                      {imageList2.map((item) => (
-                        <div className="logo-item">
-                          {item.content}
-                          <img
-                            src={item.src}
-                            className="language-logo"
-                            alt=""
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    <div className="logo-row3">
-                      {imageList3.map((item) => (
-                        <div className="logo-item">
-                          {item.content}
-                          <img
-                            src={item.src}
-                            className="language-logo"
-                            alt=""
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    <div className="logo-row4">
-                      {imageList4.map((item) => (
+                      {mobileList1.map((item) => (
                         <div className="logo-item">
                           {item.content}
                           <img
@@ -615,65 +716,47 @@ export default function HomePage() {
                       ))}
                     </div>
                   </div>
-                  <div className="logos-rightSide">
-                    <div className="rightSide-row1">
-                      {imageListRight1.map((item) => (
-                        <div className="logo-item">
-                          {item.content}
-                          <div className="hov">
-                            <img
-                              src={item.src}
-                              className="rightSide-logo2c"
-                              alt=""
-                            />
-                            <div className="logos-rightSideText">
-                              {item.iconText}
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="rightSide-row2">
-                      {imageListRight2.map((item) => (
+                </div>
+              </Slide>
+              <Slide>
+                <div className="professional">
+                  <p>
+                    I am an experienced
+                    <span className="textBold"> IoT </span>with a proven track
+                    record of designing and implementing IoT solutions.
+                    <br />
+                    familiar with Arduino, AWS IoT. Strong understanding of
+                    cloud-based solutions and data security.
+                    <br />
+                    Strong problem-solving skills, effective communication and
+                    team-oriented approach.
+                  </p>
+                </div>
+                <div className="logos-container">
+                  <div className="logos-leftSide">
+                    <div className="logo-row">
+                      {IOTList1.map((item) => (
                         <div className="logo-item">
                           {item.content}
                           <img
                             src={item.src}
-                            className="rightSide-logo2"
+                            className="language-logo"
                             alt=""
                           />
                         </div>
                       ))}
                     </div>
-                    <div className="rightSide-row3">
-                      {imageListRight3.map((item) => (
-                        <div className="logo-item">
-                          {item.content}
-                          <img
-                            src={item.src}
-                            className="rightSide-logo2"
-                            alt=""
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="proofOfWork">
-                    <a
-                      href="https://github.com/franzbiely"
-                      className="redirect-link"
-                      target="_blank"
-                    >
-                      For more proof of work, <br />
-                      Please refer to my GitHub account
-                    </a>
                   </div>
                 </div>
               </Slide>
             </Slider>
             <div className="button-logo">
               <ButtonNext className="button-Slide-next">
-                <HiOutlineChevronRight size={90} className="button-slide" />
+                <HiOutlineChevronRight
+                  size={90}
+                  className="button-slide"
+                  onClick={changeStyle}
+                />
               </ButtonNext>
             </div>
           </div>

@@ -7,17 +7,25 @@
 
 .big-image {
     margin-left: -280px;
+    transition:all 1s linear;
+}
+.big-image.big-image2 {
+    right: -220px;
+    position: absolute;
+    
 }
 .display-Image {
     height: 720px;
     width: 500px;
     box-shadow: inset 0px 0px 30px 30px rgba(0,0,0,0.9);
 }
+
 .details-container {
     margin-top: 20px;
     margin-left: 30px;
     position: relative;
 }
+
 .fname {
     text-align: start;
 }
@@ -100,6 +108,18 @@ p {
     display: flex;
     flex-direction: row;
 }
+/* ----------Mobile----------------- */
+.mobileLogos-container {
+    display: flex;
+    flex-direction: row;
+}
+.logos-leftSide {
+    text-align: left;
+    margin-left: 30px;
+    margin-top: -5px;
+    position: relative;
+}
+/* ----------Mobile----------------- */
 .logos-leftSide {
     text-align: left;
     margin-left: 30px;
@@ -111,12 +131,12 @@ p {
 }
 .logo-row2 {
     display: flex;
-    margin-left: 78px;
+    margin-left: 60px;
     flex-direction: row;
 }
 .logo-row3 {
     display: flex;
-    margin-left: 78px;
+    margin-left: 60px;
 }
 .logo-row4 {
     display: flex;
@@ -143,6 +163,7 @@ p {
 } */
 .logos-rightSide {
     margin-left: 40px;
+    margin-top: -25px;
 }
 .rightSide-row1 {
     display: flex;
@@ -218,12 +239,14 @@ p {
     text-align: left;
 }
 .proofOfWork {
-    margin-top: 80px;
-    margin-left: -5x;
+    margin-top: -40px;
+    margin-left: 575px;
     height: 50px;
     text-align: left;
     font-weight: 100;
     transition: transform .3s;
+    position: relative;
+   
 }
 .proofOfWork:hover {
     -ms-transform: scale(1.5);
@@ -270,7 +293,7 @@ a:hover {
     flex-direction: column;
     height: 200px;
     width: 700px;
-    margin-top: -60px;
+    margin-top: -200px;
     margin-left: 90px;
 }
 .comment-section {
@@ -362,13 +385,38 @@ margin-left: -760px;
 .button-slide:hover {
     color: rgba(216, 210, 210, 0.758);
 }
+.cont {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 150px;
+    background-color: violet;
+  }
+  .buttonx {
+    border-radius: 8px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    margin-left: 70px;
+    margin-top: 100px;
 
+  }
+  .cont2 {
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 150px;
+    background-color: yellow;
+    transform: translatex(400px);
+    transition: transform 3s;
+  }
 /* ----------- Tooltip ---------- */
+
 .tooltipContent{
     width: 300px;
     height: 300px;
-    margin-left: -6px;
     object-fit: cover;
+    border-radius: 4px;
 }
   .tooltip[data-tool-tip] {
     position: relative;
@@ -380,30 +428,28 @@ margin-left: -760px;
   .logo-item:hover .tooltip {
     visibility: visible;
     opacity: 1;
+    cursor: pointer;
   }
   .tooltip[data-tool-tip] {
     text-align:center;
     content: attr(data-tool-tip);
     visibility: hidden;
     opacity: 0;
-    min-width: 100%;
-    width: max-content;
-    height: max-content;
     position: absolute;
     box-sizing: border-box;
     display: block;
-    margin-left: -115px;
-    padding: 4px 8px;
+    margin-top: -10px;
     background-color: #5a5a5a;
-    color: white;
     border-radius: 4px;
     font-size: 0.8em;
     font-weight: 500;
     white-space: nowrap;
     transition: opacity ease-out 150ms, bottom ease-out 150ms;
+    z-index: 1;
   }
   .tooltip[data-position='top'] {
-    margin-left: 100px;
+    margin-left: 90px;
+    margin-top: -85px;
     width: 300px;
     height: 300px;
   }
